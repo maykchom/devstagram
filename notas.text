@@ -1,6 +1,9 @@
 Limpiar caché: php artisan route:cache
 Listar todas las rutas: php artisan route:list
 Crear modelo, migracion y controlador: php artisan make:model --migracion --controller nombreSinguarl
+Crear modelo, migracion y controlador: php artisan make:model Follower -mc
+Crear un controlador: php artisan make:controller HomeController
+Crear un componentes: php artisan make:component ListarPost
 Hacer rollback con pasos estipulados: php artisan migrate:rollback --step=1
 Hacer migracion: php artisan migrate
 Crear un policy: php artisan make:policy ComentarioPolicy --model=Comentario
@@ -11,4 +14,6 @@ Instalar npm en un proyecto de laravel: npm init
 Iniciar vite con npm: npm dev run
 Iniciar el servidor de laravel: php artisan serve
 Crear una migracion: php artisan make:migration add_imagen_field_to_users_table
-
+Limpiar vistas (recomendado al usar componentes): php artisan view:clear
+Instalar livewire: composer require livewire/livewire
+Crear componente de livewire php artisan make:livewire like-post

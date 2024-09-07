@@ -3,16 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        @stack('styles')
-        @vite('resources/js/app.js')
         <title>Devstagram - @yield('titulo')</title>
+        @stack('styles')
+        {{-- CARGAR LOS SCRIPS PROPIOS DE LA CARPETA RESOURCES --}}
+        @vite('resources/js/app.js')
+        {{-- CARGAR LOS ESTILOS PROPIOS DE LA CARPETA RESOURCES --}}
         @vite('resources/css/app.css')
-
+        {{-- ESTILOS DE LIVEWIRE NECESARIOS --}}
+        @livewireStyles
     </head>
     <body class="bg-gray-100">
         <header class="p-5 border-b bg-white shadow">
             <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-3xl font-black">Devstragram</h1>
+                <a href="{{route('home')}}" class="text-3xl font-black">Devstragram</a>
 
                 {{-- @if (auth()->user())
                     <p>Auntenticado</p>
@@ -59,6 +62,8 @@
         <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
             DevStagram - Todos los derechos reservados {{now()->year}}
         </footer>
+    {{-- SCRIPS DE LIVEWIRE NECESARIOS --}}
+    @livewireScripts
     </body>
     
 </html>
