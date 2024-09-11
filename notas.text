@@ -1,3 +1,4 @@
+**//DEVSTAGRAM//**
 Limpiar caché: php artisan route:cache
 Listar todas las rutas: php artisan route:list
 Crear modelo, migracion y controlador: php artisan make:model --migracion --controller nombreSinguarl
@@ -10,10 +11,34 @@ Crear un policy: php artisan make:policy ComentarioPolicy --model=Comentario
 Crear un modelo, migracion y factory: php artisan make:model --migration --factory Comentario
 Generar una llave para el proyecto de laravel: php artisan key:generate
 Instalar composer en un proyecto de laravel: composer install
-Instalar npm en un proyecto de laravel: npm init
+Inicializar (crea el archivo package.json) npm en un proyecto de laravel: npm init
+Instalar (instala las dependencias del proyecto, archivo package.json) npm en un proyecto de laravel: npm install
 Iniciar vite con npm: npm dev run
 Iniciar el servidor de laravel: php artisan serve
 Crear una migracion: php artisan make:migration add_imagen_field_to_users_table
 Limpiar vistas (recomendado al usar componentes): php artisan view:clear
 Instalar livewire: composer require livewire/livewire
 Crear componente de livewire php artisan make:livewire like-post
+Crear proyecto de laravel con composer (toma la version actual): composer create-project laravel/laravel nombreProjecto
+Crear proyecto de laravel con composer (version especifica hasta última actualizacion): composer create-project laravel/laravel nombreProjecto "9.*"
+Crear proyecto de laravel con composer (version especifica con actializacion especifica): composer create-project laravel/laravel nombreProjecto "9.2"
+
+Pasar a español validaciones:
+    1) Descargar repositorio necesario: https://github.com/MarcoGomesr/laravel-validation-en-espanol
+    2) Crear carpeta "lang" en resources, dentro crear otra carpeta llamada "es" y dentro pegar los archivos .php del repositorio
+    3) Buscar 'locale' en la ruta config/app.php y colocar "es" en vez de "en" y en el archivo .env buscar APP_LOCALE y colocar "es" en vez de "en"
+
+
+**//DEVJOBS//**
+Servidor de correo para devjobs:
+Solo que Devjobs utiliza mailhog el servidor de email que viene incluido en la versión de docker
+Pero puedes crearte una cuenta en https://mailtrap.io/ no tiene costo su manejo es muy simple.
+Una vez creada tu cuenta, te diriges a inboxes y luego a My inbox >  SMTP Settings y 
+en Integrations selecciona Laravel 7+
+Y sustitulles las variables del .env por los proporcionados por mailtrap
+
+Instalar Breeze: 
+    1) Descargar breeze: composer require laravel/breeze --dev
+    2) Instalar breeze (Blade with Alpine): php artisan breeze:install
+
+Listar los comandos de laravel: php artisan list
